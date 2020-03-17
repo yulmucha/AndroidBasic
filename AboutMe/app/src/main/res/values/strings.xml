@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Jeon Yul</string>
+    <string name="orange_star">Orange star</string>
+    <string name="bio">Now it’s your turn to complete this exercise.
+        \n\nAdd a ScrollView with a TextView showing information about yourself to the layout.
+        \nStyle the TextView with NameStyle, and add additional styling to separate the scrollable text from the edges of the screen.
+        \nAdd some spacing between the lines using the lineSpacingMultiplier property to the TextView.
+        \nandroid:lineSpacingMultiplier="1.2"/>
+        \nThe "Extract dimension resource" menu option is not available for this attribute, so you will have to add it to dimens.xml by hand.
+    </string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done">Done</string>
+</resources>
