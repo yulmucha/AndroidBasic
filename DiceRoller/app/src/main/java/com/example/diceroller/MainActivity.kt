@@ -1,19 +1,19 @@
 package com.example.diceroller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import com.example.diceroller.databinding.ActivityMainBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-    lateinit var diceImage: ImageView;
+    private lateinit var binding: ActivityMainBinding;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        diceImage = findViewById(R.id.dice_image)
-        val rollButton: Button = findViewById(R.id.roll_button)
-        rollButton.setOnClickListener {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.rollButton.setOnClickListener {
             rollDice()
         }
     }
@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-
-        diceImage.setImageResource(drawableResource)
+        binding.diceImage.setImageResource(drawableResource)
     }
 
 }
